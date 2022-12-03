@@ -1,3 +1,10 @@
+mtree-netbsd (20180822-6.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Convert to 3.0 source format.
+
+ -- Bastian Germann <bage@debian.org>  Sat, 03 Dec 2022 01:03:29 +0100
+
 mtree-netbsd (20180822-6) unstable; urgency=medium
 
   * Remove dependency on freebsd-buildutils for now, since it is

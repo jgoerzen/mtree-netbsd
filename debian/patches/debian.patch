@@ -1,0 +1,23 @@
+--- mtree-netbsd-20180822.orig/pack_dev.c
++++ mtree-netbsd-20180822/pack_dev.c
+@@ -58,6 +58,9 @@ __RCSID("$NetBSD: pack_dev.c,v 1.5 2008/
+ #include <sys/stat.h>
+ #endif
+ 
++/* Linux libc has these here */
++#include <sys/sysmacros.h>
++
+ #if HAVE_LIMITS_H
+ #include <limits.h>
+ #endif
+--- mtree-netbsd-20180822.orig/spec.c
++++ mtree-netbsd-20180822/spec.c
+@@ -464,7 +464,7 @@ parsedev(char *arg)
+ 			mtree_err("not enough arguments");
+ 		result = (*pack)(argc, numbers, &error);
+ 		if (error != NULL)
+-			mtree_err(error);
++                  mtree_err("%s", error);  /* clear up gcc warning */
+ 	} else {
+ 		result = (dev_t)strtoul(arg, &ep, 0);
+ 		if (*ep != '\0')
