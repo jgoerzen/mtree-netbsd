@@ -1,0 +1,38 @@
+From: John Goerzen <jgoerzen@complete.org>
+Date: Tue, 20 Dec 2022 07:22:23 +0000
+Subject: Switch to libbsd sha256sum implementation
+
+The libnbcompat one was causing incorrect results for some reason.
+---
+ compare.c | 3 ++-
+ create.c  | 3 ++-
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/compare.c b/compare.c
+index 0c9234a..3ec5ca9 100644
+--- a/compare.c
++++ b/compare.c
+@@ -90,7 +90,8 @@ __RCSID("$NetBSD: compare.c,v 1.7 2013/09/08 16:20:10 ryoon Exp $");
+ #if HAVE_SHA2_H && HAVE_SHA512_FILE
+ #include <sha2.h>
+ #else
+-#include <nbcompat/sha2.h>
++#include <sha256.h>
++#include <sha512.h>
+ #endif
+ #endif
+ 
+diff --git a/create.c b/create.c
+index 0dc51d5..7b088ca 100644
+--- a/create.c
++++ b/create.c
+@@ -111,7 +111,8 @@ __RCSID("$NetBSD: create.c,v 1.9 2013/09/08 16:20:10 ryoon Exp $");
+ #if HAVE_SHA2_H && HAVE_SHA512_FILE
+ #include <sha2.h>
+ #else
+-#include <nbcompat/sha2.h>
++#include <sha256.h>
++#include <sha512.h>
+ #endif
+ #endif
+ 
