@@ -1,6 +1,8 @@
 mtree-netbsd (20180822-7) unstable; urgency=medium
 
   * [Helmut Grohne] Properly handle DEB_BUILD_OPTIONS=nocheck.  Closes: #1003640.
+  * Switch to the libmd sha256sum.  The one in nbcompat was suddenly
+    not working right any more.  Closes: #1026754.
 
  -- John Goerzen <jgoerzen@complete.org>  Tue, 20 Dec 2022 00:19:28 -0600
 
