@@ -1,3 +1,9 @@
+mtree-netbsd (20180822-8) UNRELEASED; urgency=medium
+
+  * Drop use of autotools-dev debhelper.
+
+ -- Debian Janitor <janitor@jelmer.uk>  Tue, 20 Dec 2022 22:02:56 -0000
+
 mtree-netbsd (20180822-7) unstable; urgency=medium
 
   * [Helmut Grohne] Properly handle DEB_BUILD_OPTIONS=nocheck.  Closes: #1003640.
