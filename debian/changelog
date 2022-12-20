@@ -1,3 +1,9 @@
+mtree-netbsd (20180822-7) unstable; urgency=medium
+
+  * [Helmut Grohne] Properly handle DEB_BUILD_OPTIONS=nocheck.  Closes: #1003640.
+
+ -- John Goerzen <jgoerzen@complete.org>  Tue, 20 Dec 2022 00:19:28 -0600
+
 mtree-netbsd (20180822-6.1) unstable; urgency=medium
 
   * Non-maintainer upload.
