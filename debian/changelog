@@ -1,3 +1,13 @@
+mtree-netbsd (20180822-8) UNRELEASED; urgency=medium
+
+  * Remove constraints unnecessary since buster (oldstable):
+    + Build-Depends: Drop versioned constraint on libnbcompat-dev (>=
+      20180822-5).
+    + Build-Depends: Replace dependency on transitional package bsdtar with
+      replacement libarchive-tools (>= 3.3.3-4+deb10u1).
+
+ -- Debian Janitor <janitor@jelmer.uk>  Wed, 04 Jan 2023 21:32:41 -0000
+
 mtree-netbsd (20180822-7) unstable; urgency=medium
 
   * [Helmut Grohne] Properly handle DEB_BUILD_OPTIONS=nocheck.  Closes: #1003640.
