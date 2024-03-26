@@ -2,6 +2,7 @@ mtree-netbsd (20180822-8) unstable; urgency=medium
 
   * Remove old transitional package bsdtar from deps.
   * Tweaks to packaging
+  * Add some nbcompat prototypes.  Closes: #1066190, #1066647.
 
  -- John Goerzen <jgoerzen@complete.org>  Tue, 26 Mar 2024 17:46:25 -0500
 
