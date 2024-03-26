@@ -1,3 +1,10 @@
+mtree-netbsd (20180822-8) unstable; urgency=medium
+
+  * Remove old transitional package bsdtar from deps.
+  * Tweaks to packaging
+
+ -- John Goerzen <jgoerzen@complete.org>  Tue, 26 Mar 2024 17:46:25 -0500
+
 mtree-netbsd (20180822-7) unstable; urgency=medium
 
   * [Helmut Grohne] Properly handle DEB_BUILD_OPTIONS=nocheck.  Closes: #1003640.
