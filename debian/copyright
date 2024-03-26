@@ -71,10 +71,6 @@ Files: debian/control
 Copyright:  2018, John Goerzen <jgoerzen@complete.org>
 License: GPL-2+
 
-Files: debian/control~
-Copyright:  2018, John Goerzen <jgoerzen@complete.org>
-License: GPL-2+
-
 Files: debian/copyright
 Copyright:  2018, John Goerzen <jgoerzen@complete.org>
 License: GPL-2+

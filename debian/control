@@ -2,7 +2,7 @@ Source: mtree-netbsd
 Section: utils
 Priority: optional
 Maintainer: John Goerzen <jgoerzen@complete.org>
-Build-Depends: debhelper (>= 10), autotools-dev, bmake, libnbcompat-dev (>= 20240319-1), libarchive-tools, libncurses-dev, libbsd-dev, libmd-dev
+Build-Depends: debhelper (>= 13), autotools-dev, bmake, libnbcompat-dev (>= 20240319), libarchive-tools, libncurses-dev, libbsd-dev, libmd-dev
 Standards-Version: 4.6.2
 Homepage: https://cdn.netbsd.org/pub/pkgsrc/current/pkgsrc/pkgtools/mtree/README.html
 Vcs-Git: https://github.com/jgoerzen/mtree-netbsd.git
