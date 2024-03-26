@@ -1,2 +1,3 @@
 debian.patch
 0002-Switch-to-libbsd-sha256sum-implementation.patch
+prototypes.patch

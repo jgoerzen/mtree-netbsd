@@ -1,0 +1,30 @@
+Description: Fix FTBFS on missing prototypes
+Author: John Goerzen <jgoerzen@complete.org>
+Last-Update: 2024-03-26
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/getid.c
++++ b/getid.c
+@@ -122,6 +122,22 @@
+ static	int		pwscan(int, uid_t, const char *);
+ static	int		pwmatchline(int, uid_t, const char *);
+ 
++/* These are from libnbcompat on Debian, but it doesn't provide prototypes. */
++extern int
++pwcache_groupdb(
++        int             (*a_setgroupent)(int),
++        void            (*a_endgrent)(void),
++        struct group *  (*a_getgrnam)(const char *),
++        struct group *  (*a_getgrgid)(gid_t));
++
++extern int
++pwcache_userdb(
++        int             (*a_setpassent)(int),
++        void            (*a_endpwent)(void),
++        struct passwd * (*a_getpwnam)(const char *),
++        struct passwd * (*a_getpwuid)(uid_t));
++
++
+ #define	MAXGRP		200
+ #define	MAXLINELENGTH	1024
+ 
